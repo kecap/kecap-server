@@ -1,9 +1,13 @@
+const {
+  MONGO_CONNECTION_STRING,
+} = process.env;
+
 module.exports = {
   mongodb: {
     connections: [{
       name: 'mongo',
       adapter: require('node-norm-mongo'),
-      connectionString: 'mongodb://alfath:password@ds129926.mlab.com:29926/instagram',
+      connectionString: MONGO_CONNECTION_STRING,
       schemas: [
         {
           name: 'userSession',
