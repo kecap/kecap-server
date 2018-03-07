@@ -1,0 +1,21 @@
+{
+  "name": "kecap-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bono": "^0.3.4",
+    "bono-auth": "^1.1.1",
+    "bono-norm": "^1.1.2",
+    "jsonwebtoken": "^8.2.0",
+    "kcors": "^2.2.1",
+    "node-norm": "^0.6.1",
+    "node-norm-mongo": "^1.0.2"
+  }
+}
