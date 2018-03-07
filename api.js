@@ -5,6 +5,9 @@ class Api extends Bundle {
   constructor () {
     super();
     this.get('/', ctx => 'hello');
+    this.get('/ok', ctx => {
+      return { foo: 'bar' };
+    });
     this.get('/history', this.history.bind(this));
     this.post('/billing', this.billing.bind(this));
   }
@@ -23,7 +26,7 @@ class Api extends Bundle {
         // return { success: true, message: 'data has been saved' }
       });
     } catch (error) {
-      
+
     }
   }
 

@@ -1,14 +1,14 @@
 {
-  "name": "kecap-server",
+  "name": "kecap-wallet-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Kecap wallet server",
   "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/**",
     "start": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "alfathdirk <alfathdirk@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "bono": "^0.3.4",
     "bono-auth": "^1.1.1",
@@ -17,5 +17,9 @@
     "kcors": "^2.2.1",
     "node-norm": "^0.6.1",
     "node-norm-mongo": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "^5.0.1",
+    "supertest": "^3.0.0"
   }
 }
