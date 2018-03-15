@@ -1,5 +1,7 @@
+const fs = require('fs');
 const {
   MONGO_CONNECTION_STRING,
+  SECRET
 } = process.env;
 
 module.exports = {
@@ -26,4 +28,9 @@ module.exports = {
       ],
     }],
   },
+  secret: SECRET || 'rahasia',
+  ssl: {
+    key: fs.readFileSync('./certificate/server.pem', 'utf8'),
+    cert: fs.readFileSync('./certificate/server.crt', 'utf8'),
+  }
 };
